@@ -19,47 +19,13 @@
       </div>
     </div>
 
-    <a :href="'mailto:'+person.contact.email">
-      <div class="item">
-        <div class="icon">
-          <i class="material-icons">email</i>
-        </div>
-        <div class="text">
-          {{person.contact.email}}
-        </div>
-      </div>
-    </a>
-
-    <a :href="'tel:'+person.contact.phone">
-      <div class="item">
-        <div class="icon">
-          <i class="material-icons">phone</i>
-        </div>
-        <div class="text">
-          {{person.contact.phone}}
-        </div>
-      </div>
-    </a>
-
     <a v-if="person.contact.github" :href="'https://github.com/'+person.contact.github" target="_blank">
       <div class="item">
         <div class="icon">
           <i class="fa fa-github"></i>
         </div>
         <div class="text">
-          <span>@{{person.contact.github}}</span>
           <span>github.com/{{person.contact.github}}</span>
-        </div>
-      </div>
-    </a>
-
-    <a v-if="person.contact.website" :href="person.contact.website" target="_blank">
-      <div class="item">
-        <div class="icon">
-          <i class="material-icons">language</i>
-        </div>
-        <div class="text">
-          <span>{{person.contact.website}}</span>
         </div>
       </div>
     </a>
@@ -88,7 +54,16 @@
       <div class="contact">
         <div class="item">
           <div class="icon">
-            <i class="material-icons">email</i>
+            <i class="material-icons">home</i>
+          </div>
+          <div class="text">
+            <a :href="person.contact.website">{{person.contact.website}}</a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="icon">
+            <i class="material-icons" id="email">email</i>
           </div>
           <div class="text">
             <a :href="'mailto:'+person.contact.email">{{person.contact.email}}</a>
@@ -97,7 +72,7 @@
 
         <div class="item">
           <div class="icon">
-            <i class="material-icons">phone</i>
+            <i class="material-icons" id="phone">phone</i>
           </div>
           <div class="text">
             <a :href="'tel:'+person.contact.phone">{{person.contact.phone}}</a>
@@ -189,7 +164,6 @@ a {
   }
   .contact {
     margin-top: 15px;
-    display:flex;
     a {
       text-decoration: none;
       color: #868686;
@@ -201,14 +175,15 @@ a {
     }
     .item {
       display: flex;
-      padding-left:15px;
-    }
-    div:first-child{
-      padding-left:0;
+      height: 26px;
     }
     .text {
       padding-top: 4px;
       padding-left: 5px;
+    }
+    #email, #phone {
+      font-size:20px;
+      padding: 2px;
     }
   }
 }
@@ -219,7 +194,7 @@ a {
   font-size:14px;
   opacity:0.8;
   margin-left:20px;
-  margin-top:40px;
+  margin-top:30px;
   margin-bottom:5px;
   color:#3f3d3c;
 }
@@ -379,7 +354,7 @@ h4 {
     background-position:center;
     position:relative;
     width:100%;
-    height:200px;
+    height:210px;
   }
   .item {
     width:100%;
@@ -462,7 +437,7 @@ h4 {
   }
 }
 #myselfpic {
-  background-image:url('../../resume/id.jpg');
+  background-image:url('../../resume/id_diogo.jpg');
   color:black;
 }
 #githubIcon {

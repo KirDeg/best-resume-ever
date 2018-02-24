@@ -1,13 +1,12 @@
 /* #*/ export const PERSON = `
 name:
-  first: John
+  first: Diogo
   middle:
-  last: Doe
+  last: Aurelio
 about: Hi, my name is John Doe. I"m just about the most boring type of person you could
        possibly imagine. I like collecting leaves from the tree in my back yard and documenting
        each time I eat a peanut that is non-uniform. I am not a robot. Please hire me.
-position: Software Developer
-current_company: www.gosmarten.com
+position: Data Engineer  / Architect
 
 birth:
   year: 1990
@@ -60,12 +59,12 @@ knowledge: Also proficient in Adobe Photoshop and Illustrator, grew up bilingual
   (English and Klingon).
 
 contact:
-  email: john.doe@email.com
-  phone: 0123 456789
+  email: diogo@gosmarten.com
+  phone: +49 152 5243 1115
   street: 1234 Broadway
   city: New York
-  website: johndoe.com
-  github: johnyD
+  website: gosmarten.com
+  github: diogoaurelio
   location: Berlin, Germany
 # en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el
 lang: en
