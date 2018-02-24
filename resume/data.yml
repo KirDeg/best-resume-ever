@@ -7,6 +7,7 @@ about: Hi, my name is John Doe. I"m just about the most boring type of person yo
        possibly imagine. I like collecting leaves from the tree in my back yard and documenting
        each time I eat a peanut that is non-uniform. I am not a robot. Please hire me.
 position: Software Developer
+current_company: www.gosmarten.com
 
 birth:
   year: 1990
@@ -65,6 +66,7 @@ contact:
   city: New York
   website: johndoe.com
   github: johnyD
+  location: Berlin, Germany
 # en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el
 lang: en
 `

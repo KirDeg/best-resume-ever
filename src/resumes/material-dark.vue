@@ -7,39 +7,17 @@
     <div class="section-headline">
       {{ lang.contact }}
     </div>
-    <div class="item">
-      <div class="icon">
-        <i class="material-icons">account_circle</i>
-      </div>
-      <div class="text">
-        <ul>
-          <li> {{ lang.born }} {{person.birth.year}} {{ lang.bornIn }} {{person.birth.location}}</li>
-        </ul>
-      </div>
-    </div>
 
     <div class="item">
       <div class="icon">
-        <i class="material-icons">location_city</i>
+        <i class="material-icons">location_on</i>
       </div>
       <div class="text">
         <ul>
-          <li>{{person.contact.street}}</li>
-          <li>{{person.contact.city}}</li>
+          <li>{{person.contact.location}}</li>
         </ul>
       </div>
     </div>
-
-    <a :href="'tel:'+person.contact.phone">
-      <div class="item">
-        <div class="icon">
-          <i class="material-icons">phone</i>
-        </div>
-        <div class="text">
-          {{person.contact.phone}}
-        </div>
-      </div>
-    </a>
 
     <a :href="'mailto:'+person.contact.email">
       <div class="item">
@@ -48,6 +26,17 @@
         </div>
         <div class="text">
           {{person.contact.email}}
+        </div>
+      </div>
+    </a>
+
+    <a :href="'tel:'+person.contact.phone">
+      <div class="item">
+        <div class="icon">
+          <i class="material-icons">phone</i>
+        </div>
+        <div class="text">
+          {{person.contact.phone}}
         </div>
       </div>
     </a>
@@ -95,7 +84,26 @@
   <div class="rightCol">
     <div class="title">
       <h2>{{person.name.first}} {{person.name.middle}} {{person.name.last}}</h2>
-      <div>{{person.position}}</div>
+      <div class="position">{{person.position}}</div>
+      <div class="contact">
+        <div class="item">
+          <div class="icon">
+            <i class="material-icons">email</i>
+          </div>
+          <div class="text">
+            <a :href="'mailto:'+person.contact.email">{{person.contact.email}}</a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="icon">
+            <i class="material-icons">phone</i>
+          </div>
+          <div class="text">
+            <a :href="'tel:'+person.contact.phone">{{person.contact.phone}}</a>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="section-headline">{{ lang.experience }}</div>
@@ -133,7 +141,7 @@ export default Vue.component(name, getVueOptions(name));
 <style lang="less" scoped>
 .resume {
   font-family:'Roboto' !important;
-  background:#cccccc;
+  background:#f2f2f2;
 }
 a {
   cursor:pointer;
@@ -153,51 +161,66 @@ a {
   h2 {
     text-transform:uppercase;
     display:block;
-    font-size:1.17em;
+    font-size:40px;
     -webkit-margin-before:1em;
     -webkit-margin-after:1em;
     -webkit-margin-start:0;
     -webkit-margin-end:0;
-    color:white;
-    color:rgba(0,0,0,0.7);
+    color:rgb(53,53,53);
     padding-top:0;
     margin-top:0;
-    letter-spacing:10px;
-    font-weight:400;
+    margin-bottom:0;
+    letter-spacing:3px;
   }
-  div {
-    margin-top:-5px;
+  .position {
     margin-top:0;
     margin:0;
     padding:0;
     line-height:15pt;
-    font-weight:300;
     font-weight:500;
-    letter-spacing:2px;
     letter-spacing:3px;
-    color:white;
-    color:#16151c;
-    color:rgba(63,61,60,0.71);
+    color:rgb(80,80,80);
     display:block;
-    font-size:0.67em;
-    font-size:10pt;
-    -webkit-margin-before:2.33em;
+    font-size:14px;
     -webkit-margin-start:0;
     -webkit-margin-end:0;
     padding-top:0;
     text-transform:uppercase;
-    opacity:0.8;
+  }
+  .contact {
+    margin-top: 15px;
+    display:flex;
+    a {
+      text-decoration: none;
+      color: #868686;
+    }
+    div {
+      font-size: 15px;
+      color: #868686;
+      font-weight: 400;
+    }
+    .item {
+      display: flex;
+      padding-left:15px;
+    }
+    div:first-child{
+      padding-left:0;
+    }
+    .text {
+      padding-top: 4px;
+      padding-left: 5px;
+    }
   }
 }
 .section-headline {
   text-transform:uppercase;
   font-weight:500;
   letter-spacing:3px;
-  font-size:10pt;
+  font-size:14px;
   opacity:0.8;
   margin-left:20px;
   margin-top:40px;
-  margin-bottom:20px;
+  margin-bottom:5px;
   color:#3f3d3c;
 }
 .c {
@@ -339,7 +362,7 @@ h4 {
   text-align:left;
   color:#ffffff;
   color:rgba(255,255,255,0.59);
-  background-color:#16151c;
+  background-color:#324d61;
   overflow:hidden;
   display:block;
   .section-headline {
@@ -356,7 +379,7 @@ h4 {
     background-position:center;
     position:relative;
     width:100%;
-    height:277px;
+    height:200px;
   }
   .item {
     width:100%;
