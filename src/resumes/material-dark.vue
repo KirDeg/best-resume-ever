@@ -70,7 +70,6 @@
           <span>{{skill.name}}&nbsp;</span>
           <div class="progress">
             <div class="determinate" :style="'width: '+skill.level+'%;'">
-              <i class="fa fa-circle"></i>
             </div>
           </div>
         </div>
@@ -425,6 +424,7 @@ h4 {
     }
     span {
       font-weight:300;
+      font-size:14px;
     }
     .skill {
       clear:both;
@@ -445,7 +445,7 @@ h4 {
         .progress {
           float:left;
           position:relative;
-          height:2px;
+          height:8px;
           display:block;
           width:95%;
           background-color:rgba(255,255,255,0.19);
