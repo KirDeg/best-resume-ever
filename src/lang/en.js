@@ -5,6 +5,7 @@ const lang = {
   experience: 'Experience',
   education: 'Education',
   skills: 'Skills',
-  about: 'About me'
+  about: 'About me',
+  reference: 'Reference'
 };
 export default lang;

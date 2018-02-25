@@ -5,7 +5,16 @@
     <div class="heading" id="myselfpic">
     </div>
     <div class="section-headline">
-      {{ lang.contact }}
+      {{ lang.about }}
+    </div>
+    <div class="item">
+      <p>
+        {{person.about}}
+      </p>
+    </div>
+
+    <div class="section-headline">
+      {{ lang.reference }}
     </div>
 
     <div class="item">
@@ -26,6 +35,28 @@
         </div>
         <div class="text">
           <span>github.com/{{person.contact.github}}</span>
+        </div>
+      </div>
+    </a>
+
+    <a v-if="person.contact.github" :href="'https://linkedin.com/in/'+person.contact.linkedin" target="_blank">
+      <div class="item">
+        <div class="icon">
+          <i class="fa fa-linkedin" id="linkedin"></i>
+        </div>
+        <div class="text">
+          <span>linkedin.com/in/{{person.contact.linkedin}}</span>
+        </div>
+      </div>
+    </a>
+
+    <a v-if="person.contact.blog" :href="person.contact.blog" target="_blank">
+      <div class="item">
+        <div class="icon">
+          <i class="material-icons">language</i>
+        </div>
+        <div class="text">
+          <span>{{person.contact.blog}}</span>
         </div>
       </div>
     </a>
@@ -358,21 +389,30 @@ h4 {
   }
   .item {
     width:100%;
-    margin-top:13px;
+    margin-top:10px;
     float:left;
+    p {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
     .fa, .material-icons {
       display:inherit;
       text-align:center;
     }
     .icon {
-      width:20%;
+      width:12%;
       float:left;
+      margin-left:10px;
+    }
+    #linkedin {
+      font-size:20px;
+      padding: 2px;
     }
     .text {
       float:right;
-      width:69%;
+      width:73%;
       padding-right:10%;
-      padding-top:0;
+      padding-top:4px;
       display:block;
       font-size:15px;
       font-weight:300;

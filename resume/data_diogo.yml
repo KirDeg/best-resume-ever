@@ -65,7 +65,9 @@ contact:
   city: New York
   website: gosmarten.com
   github: diogoaurelio
+  linkedin: diogoaurelio
   location: Berlin, Germany
+  blog: datacenternotes.wordpress.com
 # en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el
 lang: en
 `
