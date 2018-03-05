@@ -60,6 +60,13 @@ All resumes will be exported to the `pdf/` folder.
 
 <br>
 
+## Updating resume
+
+Resume data is editable via yaml file located in "resume" directory. Just copy paste resume/data_example.yml to resume/data.yml and adapt there your personal info. Finally, add your own picture to resume/id.jpg.
+
+The template I am using is "material-dark". After you run `npm run dev` just select it to view your changes.
+That's it!
+
 
 ## Creating and Updating Templates
 

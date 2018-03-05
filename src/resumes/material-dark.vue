@@ -477,7 +477,7 @@ h4 {
   }
 }
 #myselfpic {
-  background-image:url('../../resume/id_diogo.jpg');
+  background-image:url('../../resume/id.jpg');
   color:black;
 }
 #githubIcon {
